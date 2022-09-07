@@ -6,22 +6,29 @@ namespace ConsoleApp5
 {
     class Class4
     {
-        public static void Main()
+     public static void Main12()
         {
-            int i, j,n;
-            Console.WriteLine("Enter a number");
-            n = Convert.ToInt32(Console.ReadLine());
-            for (i = 1; i <= n; i++)
+            int[,] matrix = new int[2, 2];//{{1,2},{3,4}};
+            for(int row = 0; row < 2; row++)
             {
-                for (j = 2; j < i; j++)
+                for (int col=0; col < 2; col++)
                 {
-                    if (i % j == 0)
-                        break;
+                    Console.Write("enter value to matrix["+row+","+col+"]:");
+                    matrix[row, col] = Convert.ToInt32(Console.ReadLine());
                 }
-                if (i == j)
-                    Console.WriteLine("prime numbers are" + n);
+            }
+            for(int row=0; row<2;row++)
+            {
+                for (int col = 0; col < 2; col++)
+                {
+                    Console.Write(matrix[row, col] + "\t");
+                }
+                Console.WriteLine();
             }
 
         }
-    }
-}
+            }
+
+        }
+    
+

@@ -6,7 +6,7 @@ namespace ConsoleApp5
 {
     class Class1
     {
-        public static void Main2()
+        public static void Main6()
         {
             int num1 = 0, num2 = 1, num3, i, number;
             Console.WriteLine("Enter number of elements");
