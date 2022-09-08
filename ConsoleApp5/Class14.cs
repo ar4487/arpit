@@ -19,7 +19,7 @@ namespace ConsoleApp5
         }
         public static calculator operator+(calculator c1, calculator c2)
         {
-            calculator c3 = new calculator(10, 10);
+            calculator c3 = new calculator(0,0);
             c3.n1 = c1.n1 + c2.n1;
             c3.n2 = c1.n2 + c2.n2;
             return c3;
@@ -27,11 +27,11 @@ namespace ConsoleApp5
     }
     class Class14
     {
-        public static void Main()
+        public static void Main14()
         {
             calculator c1 = new calculator(30,40);
             calculator c2 = new calculator(20,20);
-            calculator c3 = new calculator(10, 10);
+            calculator c3 = new calculator(0, 0);
             c3 = c1 + c2;
             c3.print();
 
