@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp8
+{
+    class Class9
+    {
+        public static void Main()
+        {
+            int i, j, m, n;
+            int[,] array1 = new int[10, 10];
+            int[,] array2 = new int[10, 10];
+            int[,] array3 = new int[10, 10];
+            Console.WriteLine("Enter number of rows and columns");
+            n = Convert.ToInt32(Console.ReadLine());
+            m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Elements in array1 :");
+            for (i = 0; i < n; i++)
+            {
+                for (j = 0; j < m; j++)
+                {
+                    array1[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Enter Elements in array2 :");
+            for (i = 0; i < n; i++)
+            {
+                for (j = 0; j < m; j++)
+                {
+                    array2[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine(" Elements in array1 :");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < m; j++)
+                {
+                    Console.WriteLine("\t{0}",array1[i, j]);
+                }
+            }
+            Console.WriteLine(" Elements in array2 :");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < m; j++)
+                {
+                    Console.WriteLine("\t{0}",array2[i, j]);
+                }
+            }
+            for (i = 0; i < n; i++)
+                for (j = 0; j < m; j++)
+                    array3[i, j] = array1[i, j] + array2[i, j];
+            Console.WriteLine("Addition of two matrix are : ");
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < m; j++)
+                {
+                    Console.WriteLine("\t{0}",array3[i,j]);
+                }
+        } }
+    }
+}

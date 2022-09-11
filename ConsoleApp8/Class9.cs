@@ -2,82 +2,79 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp7
+namespace ConsoleApp8
 {
     class Class9
     {
-        public static void Main45()
+        public static void Main()
         {
-            int i, j, m, n,p,q;
-            int[,] array1 = new int[20, 20];
-            int[,] array2 = new int[20, 20];
-           
+            int i, j, m, n, p, q;
+            int[,] array1 = new int[10, 10];
+            int[,] array2 = new int[10, 10];
 
-            Console.WriteLine("\nEnter  number of rows and columns for array1:\n");
+            Console.WriteLine("Enter number of rows and columns in matrix1");
             n = Convert.ToInt32(Console.ReadLine());
             m = Convert.ToInt32(Console.ReadLine());
-           
-            Console.Write("Enter elements in array1:\n");
+
+            Console.WriteLine("Enter number of rows and columns in matrix1");
+            p = Convert.ToInt32(Console.ReadLine());
+            q = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Enter Elements in array1 :");
             for (i = 0; i < n; i++)
             {
                 for (j = 0; j < m; j++)
                 {
                     array1[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
-
             }
-            Console.WriteLine("\nEnter  number of rows and columns for array2:\n");
-            p = Convert.ToInt32(Console.ReadLine());
-            q = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter elements in array2:\n");
+            Console.WriteLine("Enter Elements in array2 :");
             for (i = 0; i < p; i++)
             {
-                for (j = 0; j < q; j++)
+                for (j = 0; q < m; j++)
                 {
                     array2[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
-
             }
-            Console.WriteLine("\narray1 is:\n");
+            Console.WriteLine(" Elements in array1 :");
             for (i = 0; i < n; i++)
             {
                 Console.Write("\n");
                 for (j = 0; j < m; j++)
                 {
-                    Console.Write("{0}\t", array1[i, j]);
+                    Console.Write("\t{0}", array1[i, j]);
                 }
-
             }
-            Console.WriteLine("\narray2 is:\n");
-            for (i = 0; i < n; i++)
+            Console.WriteLine("\n Elements in array2 :");
+            for (i = 0; i < p; i++)
             {
                 Console.Write("\n");
-                for (j = 0; j < m; j++)
+                for (j = 0; j < q; j++)
                 {
-                    Console.Write("{0}\t", array2[i, j]);
+                    Console.Write("\t{0}", array2[i, j]);
                 }
-
             }
-           if(m != p)
+            if (m != p)
             {
-                Console.WriteLine("multiplication not possible");
+                Console.Write("multiplication not possible");
+
             }
             else
             {
-                int[,] array3 = new int[n,q];
+                int[,] array3 = new int[n, q];
                 for (i = 0; i < n; i++)
                 {
                     for (j = 0; j < q; j++)
                     {
                         array3[i, j] = 0;
-                        for(int k = 0; k < m; k++)
+                        for (int k = 0; k < m; k++)
                         {
-                            array3[i, j] = array1[i, j] * array2[i, j];
-
+                            array3[i, j] += array1[i, k] * array2[k, j];
                         }
                     }
                 }
-                Console.WriteLine("\nmultiplication of two arrays are:\n");
+                Console.Write("\nMultiplication of two matrix are:\n");
                 for (i = 0; i < n; i++)
                 {
                     for (j = 0; j < m; j++)

@@ -7,8 +7,9 @@ namespace ConsoleApp7
 {
     class Class8
     {
-        public static void Main()
+        public static void Main132()
         {
+            Console.WriteLine("=====Hashtable========");
             Hashtable ht = new Hashtable();
             ht.Add("asp", "asp.net");
             ht.Add("cs","cs.net");
