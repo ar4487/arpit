@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace ConsoleApp8
+{
+    class Employee
+    {
+       public string str = " arpit ";
+        public int id = 123 ;
+
+        public int salary =180000;
+        
+     }
+    
+    class Class10
+    {
+       
+
+        public static void main()
+        {
+            Employee emp = new Employee();
+         FileStream fs = new FileStream("Employee.json", FileMode.Append, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            
+            sw.Write(emp.str);
+            sw.Write(emp.id);
+            sw.Write(emp.salary);
+            sw.Write(emp.dob);
+            sw.Flush();
+                sw.Close();
+            fs.Close();
+
+            FileStream fsR = new FileStream("Employee.json", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fsR);
+            Console.WriteLine("======Content from file========");
+            sr.BaseStream.Seek(0, SeekOrigin.Begin);
+            while (emp!= null)
+            {
+                Console.WriteLine(emp.str);
+                emp.str = sr.ReadLine();
+
+                Console.Write(emp.id);
+                Console.Write("\n"+emp.salary);
+               
+                break;
+            }
+            sr.Close();
+            fsR.Close();
+
+        }
+
+    }
+}

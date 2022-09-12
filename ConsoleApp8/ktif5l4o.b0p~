@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace ConsoleApp8
+{
+    class Employee
+    {
+        string str = "arpit";
+     }
+    
+    class Class10
+    {
+       
+
+        public static void Main()
+        {
+            Employee[] emp = new Employee[1];
+           
+            
+            FileStream fs = new FileStream("Employee.json", FileMode.Append, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            
+            sw.Write(emp);
+            sw.Flush();
+                sw.Close();
+            fs.Close();
+          
+        }
+
+    }
+}

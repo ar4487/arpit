@@ -12,3 +12,5 @@ C:\Users\Admin\Desktop\.net core\ConsoleApp8\obj\Debug\netcoreapp3.1\ConsoleApp8
 C:\Users\Admin\Desktop\.net core\ConsoleApp8\obj\Debug\netcoreapp3.1\ConsoleApp8.dll
 C:\Users\Admin\Desktop\.net core\ConsoleApp8\obj\Debug\netcoreapp3.1\ConsoleApp8.pdb
 C:\Users\Admin\Desktop\.net core\ConsoleApp8\obj\Debug\netcoreapp3.1\ConsoleApp8.genruntimeconfig.cache
+C:\Users\Admin\Desktop\.net core\ConsoleApp8\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\.net core\ConsoleApp8\obj\Debug\netcoreapp3.1\ConsoleApp8.csproj.CopyComplete

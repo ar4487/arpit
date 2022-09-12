@@ -14,7 +14,7 @@ namespace ConsoleApp8
                 cal[s[i]]++;
         }
 
-        public static void Main12345()
+        public static void Main355()
         {
             Console.WriteLine("Enter String");
             String s = Console.ReadLine();

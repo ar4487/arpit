@@ -6,7 +6,7 @@ namespace ConsoleApp8
 {
     class Class9
     {
-        public static void Main()
+        public static void Main123456()
         {
             int i, j, m, n, p, q;
             int[,] array1 = new int[10, 10];
