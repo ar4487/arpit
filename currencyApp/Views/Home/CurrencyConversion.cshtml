@@ -1,0 +1,46 @@
+﻿
+
+
+
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<script src="~/Scripts/currency.js"></script>
+<div style="margin-top:10px" class="row">
+    <div class="col-sm-3">
+        <label class="control-label">from</label>
+        <select id="ddlfrom" class="form-control">
+        </select>
+    </div>
+    <div class="col-sm-1 icon-block">
+        <button id="btnswap"><i class="glyphicon glyphicon-sort rotate-icon"></i></button>
+    </div>
+    <div class="col-sm-3">
+        <label class="control-label">TO</label>
+        <select id="ddlTO" class="form-control"></select>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div style="margin-top:10px" class="row">
+    <div class="col-sm-3">
+        <label class="control-label">AMOUNT</label>
+        <input type="number" id="txtamount" class="form-control" value="1" />
+    </div>
+    <div class="col-sm-1 icon-block">
+        <div class="col-sm-3">
+            <label class="control-label">RESULT </label>
+            <input type="number" id="txtoutput" class="form-control" readonly />
+        </div>
+        <div style="padding-top:25px;" class="col-sm-1">
+            <button id="btnsubmit" onclick="Calculate()" class="btn btn-primary">CONVERT</button>
+        </div>
+    </div>
+</div>
+
+
+

@@ -14,7 +14,7 @@ namespace ConsoleApp8
                 cal[s[i]]++;
         }
 
-        public static void Main355()
+        public static void Main22233()
         {
             Console.WriteLine("Enter String");
             String s = Console.ReadLine();
@@ -24,8 +24,9 @@ namespace ConsoleApp8
             {
                 if (cal[i] > 1)
                 {
-                    Console.Write((char)i);
-                    Console.WriteLine(" occurrence = " + cal[i] + " Time");
+                    i = i + (cal[i] > 0);
+
+                  
                 }
                
 

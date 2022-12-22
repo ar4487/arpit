@@ -11,7 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace WebApplication4 { 
+namespace WebApplication4
+{
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -24,9 +25,14 @@ namespace WebApplication4 {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(cors => cors.AddPolicy("MyOrigin", builder =>
+            {
+
+                builder.WithOrigins("https://localhost:44369", "http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+            }));
+
             services.AddControllers();
             services.AddSwaggerGen();
-      
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -53,6 +59,7 @@ namespace WebApplication4 {
             });
 
             app.UseRouting();
+            app.UseCors("MyOrigin");
 
             app.UseAuthorization();
 

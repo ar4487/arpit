@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "CurrencyConversion";
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>CurrencyConverter</h2>
+        <form method="post" action="~/home/validate">
+            @*<label>Enter your website URL: </label>*@
+            <input type="number" step="any" min="0" name="amount" placeholder="Enter the amount"><br>
+
+
+            <br />
+            <br />
+            @Html.DropDownList("Id", ViewBag.CompaniesSelectList as SelectList, "input Currency", new { @class = "form-control" })
+            <h3> to</h3>
+            <br />
+            @*<h2>Output Currency</h2>*@
+            @Html.DropDownList("Id", ViewBag.CompaniesSelectList as SelectList, "output Currency", new { @class = "form-control" })
+            <br />
+            <input type="submit" value="send data">
+        </form>
+    </div>
+</div>
+
+@*<ol type= "A" start="">
+        <li>Orange</li>
+        <li>Grapes</li>
+        <li>apple</li>
+        <li>Banana</li>
+    </ol>*@
+
